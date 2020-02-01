@@ -79,6 +79,12 @@ export const constantRoutes = [
         name: 'VxeTable',
         component: () => import('@/views/vxeTable/index'),
         meta: { title: 'vxeTable', icon: 'table' }
+      },
+      {
+        path: 'postData',
+        name: 'PostData',
+        component: () => import('@/views/postData/index'),
+        meta: { title: 'postData', icon: 'tree' }
       }
     ]
   },
