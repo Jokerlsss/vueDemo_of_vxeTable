@@ -11,3 +11,12 @@ export function getActivityList (params) {
         }
     })
 }
+
+export function getInfo_WuHan () {
+    const timeStamp = new Date().getTime()
+    return request({
+        url: `g2/getOnsInfo?name=disease_h5&callback=&_=${timeStamp}`,
+        method: 'get',
+        baseURL: 'https://view.inews.qq.com/'
+    })
+}

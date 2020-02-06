@@ -15,14 +15,17 @@
 
 <script>
 import { getActivityList } from '@/api/vxeTable'
+import { getInfo_WuHan } from '@/api/vxeTable'
 export default {
   data () {
     return {
       tableData: null
+      // getInfo: null
     }
   },
   created () {
-    this.fetchData()
+    // this.fetchData()
+    this.fetchInfo()
   },
   methods: {
     // 获取后台数据
@@ -30,6 +33,12 @@ export default {
     fetchData () {
       getActivityList().then(response => {
         this.tableData = response.data
+      })
+    },
+    fetchInfo () {
+      getInfo_WuHan().then(response => {
+        this.getInfo = response.data
+        console.log(this.getInfo)
       })
     }
   }
